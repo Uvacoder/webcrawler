@@ -7,3 +7,5 @@ def create_project_dir(directory):
         os.makedirs(directory)
 
 create_project_dir('mitul')    
+
+# Hello
