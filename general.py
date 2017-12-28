@@ -17,9 +17,9 @@ def create_project_dir(directory):
 
 # Create queue and crawled files (if not created)
 
-def create_data_files(projectname, base_url):
-    cue = projectname + '/cue.txt'
-    crawled = projectname + '/crawled.txt'
+def create_data_files(project_name, base_url):
+    cue = project_name + '/cue.txt'
+    crawled = project_name + '/crawled.txt'
     # When crawler starts, it will refer to the cue as to what to crawl
     # It can not be empty, because the crawler will have nothing to run
 
