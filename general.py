@@ -9,7 +9,7 @@ def create_project_dir(directory):
 # create_project_dir('mitul')    
 
 # Only one URL given to the crawler
-# The cue and files already crawled are needed
+# The queue and files already crawled are needed
 # Program can crawl multiple pages at once to improve speed
 # Domain name without any ".com"
 
@@ -18,14 +18,14 @@ def create_project_dir(directory):
 # Create queue and crawled files (if not created)
 
 def create_data_files(project_name, base_url):
-    cue = project_name + '/cue.txt'
+    queue = project_name + '/queue.txt'
     crawled = project_name + '/crawled.txt'
-    # When crawler starts, it will refer to the cue as to what to crawl
+    # When crawler starts, it will refer to the queue as to what to crawl
     # It can not be empty, because the crawler will have nothing to run
 
-    # If cue file exists, don't create. vice versa
-    if not os.path.isfile(cue):
-        write_file(cue, base_url)
+    # If queue file exists, don't create. vice versa
+    if not os.path.isfile(queue):
+        write_file(queue, base_url)
     if not os.path.isfile(crawled):
         write_file(crawled, '')
 
@@ -52,7 +52,7 @@ def delete_file_contents(path):
         pass
 
 # Store contents within a "Set" because a set can only have unique elements
-# A page shouldn't be in both cue and crawled list
+# A page shouldn't be in both queue and crawled list
 
 # Read a file and convert each line to set items
 def file_to_set(file_name):
