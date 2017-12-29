@@ -23,7 +23,7 @@ class LinkFinder(HTMLParser):
                     self.links.add(url)
 
     # Return the set, to get all the links you need in the program
-    def page_links(self)
+    def page_links(self):
         return self.links
 
     # If there's any errors, catch it and deliver the message
